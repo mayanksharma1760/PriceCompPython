@@ -25,9 +25,10 @@
   <tr>
     <th>Product</th>
     <th>Product Name</th>
-    <th><span class="tesco-hdr"><img src="{% static 'basket/tesco-logo.png'%}" alt="Tesco Logo"></span></th>
-    <th><span class="sainsburys-hdr"><img src="{% static 'basket/sainsburys-logo.png'%}" alt="Sainsburys Logo"></span></th>
-    <th><span class="morrisons-hdr"><img src="{% static 'basket/morrisons-logo.png'%}" alt="morrisons Logo"></span></th>
+
+    <th><span  class="tesco-hdr"><img style="height: 70px;" src="{% static 'basket/amznlogo.png'%}" alt="Amazon Logo"></span></th>
+    <th><span  class="sainsburys-hdr"><img style="height: 70px;" src="{% static 'basket/Blnktlogo.png'%}" alt="Blinkit Logo"></span></th>
+    <th><span  class="morrisons-hdr"><img style="height: 70px;" src="{% static 'basket/bblogo.png'%}" alt="BigBasket Logo"></span></th>
     <th>Quantity</th>
     <th></th>
   </tr>
@@ -36,9 +37,9 @@
   <tr>
     <td width="102"><img src="{{item.product.thumbnail.url}}" class="basket-thumbnails" width="100" height="100" ></td>
     <td>{{item.product.name}}</td>
-    <td>£{{item.product.price_tesco}}</td>
-    <td>£{{item.product.price_sainsburys}}</td>
-    <td>£{{item.product.price_morrisons}}</td>
+    <td>₹{{item.product.price_tesco}}</td>
+    <td>₹{{item.product.price_sainsburys}}</td>
+    <td>₹{{item.product.price_morrisons}}</td>
     <td>{{item.quantity}}</td>
     <td><a href="{% url 'basket:update' item.product.slug %}?quantity=0" class="remove-from-basket">Remove</a></td>
   </tr>
@@ -46,9 +47,9 @@
   <tfoot>
     <td>Totals</td>
     <td></td>
-    <td>£{{basket.total_tesco}}</td>
-    <td>£{{basket.total_sainsburys}}</td>
-    <td>£{{basket.total_morrisons}}</td>
+    <td>₹{{basket.total_tesco}}</td>
+    <td>₹{{basket.total_sainsburys}}</td>
+    <td>₹{{basket.total_morrisons}}</td>
     <td></td>
     <td>
 

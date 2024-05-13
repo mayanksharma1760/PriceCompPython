@@ -4,18 +4,24 @@
 }
 
 table {
+  color: rgb(13, 184, 4);
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-
+tr{
+  height: 50px;
+  width: 50px;
+}
 th{
-  border: 1px solid #dddddd;
+ 
+  border: 10px solid #d03434;
   text-align: left;
   padding: 5px;
   font-size: 1.2em;
 }
+
 
 /*.tesco-hdr{
   color: #00539F
@@ -69,4 +75,8 @@ tfoot{
 .remove-from-basket:hover:after{
   content: '\2718';
   margin-left: 5px;
+}
+table{
+  color: chartreuse;
+  background-color: blueviolet;
 }
